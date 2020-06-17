@@ -69,7 +69,6 @@ public class Main {
         funcionarioList.add(funcionario10);
 
         MeuCalculo meuCalculo = new MeuCalculo();
-//        myCalculation.costPerDepartament(workerList);
         List<CustoCargo> custosCargo = meuCalculo.custoPorCargo(funcionarioList);
         List<CustoDepartamento> custoDepartamentos = meuCalculo.custoPorDepartamento(funcionarioList);
 
