@@ -2,11 +2,17 @@ package br.com.projuris;
 
 import java.math.BigDecimal;
 
+public class Funcionario {
 
-public class worker {
 
     private String cargo, departamento;
     private BigDecimal salario;
+
+    public Funcionario(String cargo, String departamento, BigDecimal salario){
+        this.cargo = cargo;
+        this.departamento = departamento;
+        this.salario = salario;
+    }
 
     public String getCargo() {
         return cargo;
