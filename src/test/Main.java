@@ -1,9 +1,6 @@
 package test;
 
-import br.com.projuris.CustoCargo;
-import br.com.projuris.CustoDepartamento;
-import br.com.projuris.MeuCalculo;
-import br.com.projuris.Funcionario;
+import br.com.projuris.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -12,6 +9,42 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("----------------------TESTE EXERCÍCIO 1----------------------");
+
+        MyFindArray myFindArray = new MyFindArray();
+
+        //teste-1
+        int[] array1 = {4,9,3,7,8};
+        int[] subArray1 = {3,7};
+
+        //teste-2
+        int[] array2 = {1,3,5};
+        int[] subArray2 = {1};
+
+        //teste-3
+        int[] array3 = {7,8,9};
+        int[] subArray3 = {8,9,10};
+
+        //teste-4
+        int[] array4 = {4,9,3,7,8,3,7,1};
+        int[] subArray4 = {3,7};
+
+        System.out.println("A ultima ocorrencia foi na posição: " + myFindArray.findArray(array1, subArray1));
+        System.out.println("A ultima ocorrencia foi na posição: " + myFindArray.findArray(array2, subArray2));
+        System.out.println("A ultima ocorrencia foi na posição: " + myFindArray.findArray(array3, subArray3));
+        System.out.println("A ultima ocorrencia foi na posição: " + myFindArray.findArray(array4, subArray4));
+
+        System.out.println("----------------------TESTE EXERCÍCIO 2----------------------");
+
+        MyFindChar myFindChar = new MyFindChar();
+
+        //teste-1
+        System.out.println("A primeira letra não repedita é: " + myFindChar.findChar("stress"));
+
+        //teste-2
+        System.out.println("A primeira letra não repedita é: " + myFindChar.findChar("reembolsar"));
+
+        System.out.println("----------------------TESTE EXERCÍCIO 3----------------------");
         Funcionario funcionario1 = new Funcionario("Assistente", "Administrativo", new BigDecimal(1000.0));
         Funcionario funcionario2 = new Funcionario("Gerente", "Administrativo", new BigDecimal(7000.70));
         Funcionario funcionario3 = new Funcionario("Diretor", "Administrativo", new BigDecimal(10000.45));
@@ -45,7 +78,7 @@ public class Main {
                     " tem um custo no total de R$" + custoCargo.getCusto());
         }
 
-        System.out.println("--------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------------");
 
         for(CustoDepartamento custoDepartamento : custoDepartamentos){
             System.out.println("O departamento " + custoDepartamento.getDepartamento() +

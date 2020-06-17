@@ -6,6 +6,7 @@ import java.util.List;
 
 public class MeuCalculo implements Calculo {
 
+    @Override
     public List<CustoCargo> custoPorCargo(List<Funcionario> funcionarios) {
         ArrayList<CustoCargo> listaCargo = new ArrayList<>();
         for (Funcionario funcionario : funcionarios) {
