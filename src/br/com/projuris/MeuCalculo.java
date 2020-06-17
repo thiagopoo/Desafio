@@ -12,7 +12,7 @@ public class MeuCalculo implements Calculo {
         for (Funcionario funcionario : funcionarios) {
             String cargo = funcionario.getCargo();
             BigDecimal custo = funcionario.getSalario();
-            boolean cadastraNovoCargo = cadastrarNovaCargo(listaCargo, cargo);
+            boolean cadastraNovoCargo = cadastrarNovoCargoCalculo(listaCargo, cargo);
 
             if (cadastraNovoCargo){
                 listaCargo.add(new CustoCargo(cargo, custo));
@@ -34,7 +34,7 @@ public class MeuCalculo implements Calculo {
         for (Funcionario funcionario : funcionarios) {
             String departamento = funcionario.getDepartamento();
             BigDecimal custo = funcionario.getSalario();
-            boolean cadastraNovo = cadastrarNovaDepartamento(listaDeparamento, departamento);
+            boolean cadastraNovo = cadastrarNovoDepartamentoCalculo(listaDeparamento, departamento);
 
             if (cadastraNovo) {
                 listaDeparamento.add(new CustoDepartamento(departamento, custo));
@@ -50,7 +50,7 @@ public class MeuCalculo implements Calculo {
         return listaDeparamento;
     }
 
-    public boolean cadastrarNovaCargo(ArrayList<CustoCargo> cargos, String cargo) {
+    public boolean cadastrarNovoCargoCalculo(ArrayList<CustoCargo> cargos, String cargo) {
         boolean cadastraNovoCargo = true;
         for (CustoCargo cargoLista : cargos) {
             if (!cargoLista.getCargo().equals(cargo)) {
@@ -63,7 +63,7 @@ public class MeuCalculo implements Calculo {
         return  cadastraNovoCargo;
     }
 
-    private boolean cadastrarNovaDepartamento(ArrayList<CustoDepartamento> listaDeparamento, String departamento) {
+    private boolean cadastrarNovoDepartamentoCalculo(ArrayList<CustoDepartamento> listaDeparamento, String departamento) {
         boolean cadastraNovoDepartamento = true;
         for (CustoDepartamento departamentos : listaDeparamento) {
             if (!departamentos.getDepartamento().equals(departamento)) {
